@@ -1,38 +1,122 @@
 .App {
-  text-align: center;
+   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*-----------Header----------------*/
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item .active{
+ /* padding-bottom: 12px;
+  border-bottom: 3px solid #EFEAD8;*/
+
+  font-weight: bold;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.nav-item{
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.App-header .navbar .nav-item::after{
+  content:'';
+  width:0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  transition: width 0.3s
+}
+.App-header .navbar .nav-item:hover::after{
+
+  width: 50%;
+}
+
+/*-----------Home----------------*/
+.Home{
+  
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-left{
+  width: 50%;
+}
+
+.Home-left span{
+  display: block;
+  
+}
+
+
+.Name{
+  font-size: 50px;
+  line-height: 100px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(assets/images/back.png);
+  -webkit-background-clip: text;
+  animation: back 20s linear infinite;
+
+
+}
+
+@keyframes back{
+  100%{background-position: 2000px 0;
+
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.Home-right{
+  width: 50%;
+  
+}
+
+.Home-right img{
+  width: 50%;
+  min-width: 150px;
+  border-radius: 10px;
+}
+
+.Home h1{
+  margin: 0;
+}
+
+.home a{
+  font-family: 'Red Hat Display', sans-serif;
+}
+/*-----------Projects----------------*/
+.Projects{
+  background-color: #FFE69A;
+  min-height: 100vh;
+}
+/*-----------Contact----------------*/
+
+.Contact{
+ 
+  min-height: 100vh;
 }
