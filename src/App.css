@@ -16,9 +16,9 @@
   color: white;
   width: 100%;
   font-family: 'Red Hat Display', sans-serif;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.507);
   backdrop-filter: blur(2px);
- 
+  z-index: 10;
 }
 
 .nav-item .active{
@@ -55,17 +55,35 @@
 }
 
 /*-----------Home----------------*/
+.HomeBackground{
+  background: url(./assets/images/fondo-home.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.HomeBackground .Waves{
+position: absolute;
+bottom: 0;
+width: 100%;
+left: 0;
+}
 .Home{
   
   min-height: 100vh;
   display:flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+
 }
 
 .Home-left{
   width: 50%;
 }
+
 
 .Home-left span{
   display: block;
@@ -98,7 +116,7 @@
 
 .Home-right img{
   width: 50%;
-  min-width: 150px;
+  min-width: 250px;
   border-radius: 10px;
 }
 
@@ -109,14 +127,172 @@
 .home a{
   font-family: 'Red Hat Display', sans-serif;
 }
+
+@media (max-width: 500px ){
+  .Home{
+  flex-direction: column;
+  
+  }
+  .Name{
+    font-size: 30px;
+    line-height: 50px;
+    margin-left: -10px;
+  
+  }
+}
+@media (max-width: 700px ){
+  .Home{
+  flex-direction: column;
+  
+  }
+  .Name{
+    
+    font-size: 30px;
+    line-height: 50px;
+    margin-left: -10px;
+    
+  
+  }
+  .Home-left{
+    margin-top: 50px;
+    width: 100%;
+  }
+  .Home-right{
+   
+    width: 100%;
+  }
+
+}
+/*-----------About Me----------------*/
+.About{
+  min-height:55vh;
+  display: flex;
+  align-items: center;
+}
+
+.Me{
+width: 50%;
+}
+
+.Skill-Section{
+width: 50%;
+}
+.Skills{
+display: flex;
+justify-content: center;
+}
+
+.Skill-item{
+position: relative;
+cursor: pointer;
+padding:  7px;
+}
+
+.Tooltip{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius:  7px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Tooltip::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color:  #000 #0000 #0000 #0000;
+}
+
+.Skill-item:hover #Tooltip {
+top: -130%;
+visibility: visible;
+opacity: 1;
+
+}
+
+
+@media (max-width: 600px ){
+  .About{
+    flex-direction: column-reverse;
+
+  }
+}
 /*-----------Projects----------------*/
 .Projects{
-  background-color: #FFE69A;
+  background-color: #4a81f7;
   min-height: 100vh;
+  align-items: center;
+}
+.Container-projects{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Card{
+  width: 200px;
+  height: 200px;
+  padding: 50px;
+  margin: 10px;
+
+  background-size: cover;
+  background-position: center center;
+
+  color: white;
+}
+
+.Card:first-child{
+  background-image: url(./assets/images/fondo-home.jpg);
 }
 /*-----------Contact----------------*/
 
-.Contact{
- 
-  min-height: 100vh;
+.Contact-section{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+  padding: 15px;
+  border-radius: 5px;
+  width: 20%;
+  min-width: 200px;
+  margin: 0 auto;
+}
+.Form-item{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+/*---Button up---*/
+#button-up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 60px;
+  color: white;
+  background-color: #4a81f7;
+  font-size: 20px;
+  border-radius: 50%;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition:all 300ms ease;
+  transform: scale(0);
+}
+
+#button-up:hover{
+  transform: scale(1.1);
+  border-color:rgba(0, 0, 0, 0.1) ;
 }
