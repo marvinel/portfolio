@@ -3,9 +3,9 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react';
 
 
-import Card from '@mui/material/Card';
-function Projects() {
 
+function Projects() {
+  const proyectos = [{ link: "https://climappte.netlify.app/", name: "climappte", descripcion: "descripcion del proyecto", }]
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, [])
@@ -15,12 +15,23 @@ function Projects() {
       <h3>
         Projects
       </h3>
-      <div className='Container-projects' >
-        <Card className='Card' data-aos="zoom-in-up" variant="outlined">Projects 1</Card>
-        <Card className='Card' data-aos="zoom-in-up" variant="outlined">Projects 2</Card>
-        <Card className='Card' data-aos="zoom-in-up" variant="outlined">Projects 3</Card>
-        <Card className='Card' data-aos="zoom-in-up" variant="outlined">Projects 4</Card>
-        <Card className='Card' data-aos="zoom-in-up" variant="outlined">Projects 5</Card>
+      <div className='Projects-wrapper' >
+        {
+          proyectos.map((proyecto) => (
+            <a href={proyecto.link} target="_blank" className="Projects-link">
+              <div data-aos="zoom-in-up" className='Projects-item'>
+                <p className="Projects-item-name">{proyecto.name}</p>
+                <div className='Projects-descripcion'>
+                 
+                  <p >{proyecto.descripcion}</p>
+              
+                  
+                </div>
+              </div>
+            </a>
+
+          ))
+        }
 
       </div>
     </div>
