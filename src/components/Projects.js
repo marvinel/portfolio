@@ -18,7 +18,7 @@ function Projects() {
       <div className='Projects-wrapper' >
         {
           proyectos.map((proyecto) => (
-            <a href={proyecto.link} target="_blank" className="Projects-link">
+            <a href={proyecto.link} target="_blank" rel="noreferrer" className="Projects-link">
               <div data-aos="zoom-in-up" className='Projects-item'>
                 <p className="Projects-item-name">{proyecto.name}</p>
                 <div className='Projects-descripcion'>

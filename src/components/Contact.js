@@ -9,6 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+
+import Swal from 'sweetalert2'
 function Contact() {
     const form = useRef();
 
@@ -18,8 +20,20 @@ function Contact() {
             .then((result) => {
                 console.log(result.text);
                 console.log("se envio el mensaje")
+                Swal.fire({
+                    title: 'Send!',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
             }, (error) => {
                 console.log(error.text);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
             });
     };
 
@@ -32,19 +46,19 @@ function Contact() {
                 <form className='form' ref={form} onSubmit={sendEmail}>
                     <div className='Form-item'>
                         <label>Name</label>
-                        <TextField
+                        <TextField className='Form-Input'
                             name="user_name"                                                 
                         />
                     </div>
                     <div className='Form-item'>
                         <label>Email</label>
-                        <TextField
+                        <TextField className='Form-Input'
                             type="email" name="user_email"                         
                         />
                     </div  >
                     <div className='Form-item'>
                         <label>Message</label>
-                        <TextField
+                        <TextField className='Form-Input'
                             name="message"
                             multiline
                             rows={4}                   
@@ -62,7 +76,7 @@ function Contact() {
                         <IconButton aria-label="Github"  >
                             <GitHubIcon />
                         </IconButton>
-                    </a>
+                    </a> 
                     <a href='mailto:marvinshb@gmail.com' rel="noreferrer" target="_blank">
                         <IconButton aria-label="Gmail" color="secondary">
                             <GoogleIcon />
