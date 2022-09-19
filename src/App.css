@@ -15,7 +15,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   width: 100%;
-  font-family: 'Red Hat Display', sans-serif;
+  
   background-color: rgba(0, 0, 0, 0.507);
   backdrop-filter: blur(2px);
   z-index: 10;
@@ -115,8 +115,9 @@ left: 0;
 }
 
 .Home-right img{
-  width: 50%;
-  min-width: 250px;
+  
+  
+  height: 250px;
   border-radius: 10px;
 }
 
@@ -124,14 +125,18 @@ left: 0;
   margin: 0;
 }
 
-.home a{
-  font-family: 'Red Hat Display', sans-serif;
-}
+
 
 @media (max-width: 500px ){
   .Home{
   flex-direction: column;
   
+  }
+  .Home-right img{
+  
+  
+    height: 150px;
+    
   }
   .Name{
     font-size: 30px;
@@ -144,6 +149,12 @@ left: 0;
   .Home{
   flex-direction: column;
   
+  }
+  .Home-right img{
+  
+  
+    height: 150px;
+    
   }
   .Name{
     
@@ -165,19 +176,17 @@ left: 0;
 }
 /*-----------About Me----------------*/
 .Aboutme{
-  color: mix(#fff, #e91e63, 85%);
-	font-size: calc(1em + 5vw) ;  
-	
-	font-weight: 900;
-	text-shadow: 
-		-0.0075em 0.0075em 0 mix(#fff, #e91e63, 94%),
-		0.005em 0.005em 0 mix(#fff, #e91e63, 60%),
-		0.01em 0.01em 0 mix(#fff, #e91e63, 62%), 
-		0.015em 0.015em mix(#fff, #e91e63, 64%), 
-		0.02em 0.02em 0 mix(#fff, #e91e63, 66%), 
-		0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
-		0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
-		0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
+ 
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  color: #4a81f7;
+  font-size: 40px;
+  letter-spacing: 5px;
+ 
+  text-shadow: -1px -1px 0px white;
+    
+    
 }
 .About{
   min-height:55vh;
@@ -185,6 +194,9 @@ left: 0;
   align-items: center;
 }
 
+.Me{
+  width: 50%;
+}
 
 .Me p{
   width: 80%;
@@ -252,12 +264,26 @@ opacity: 1;
     flex-direction: column-reverse;
 
   }
+  .Me{
+    width: 80%;
+  }
 }
 /*-----------Projects----------------*/
 .Projects{
   background-color: #4a81f7;
   align-items: center;
   padding-bottom: 50px ;
+}
+.Projects h3{
+  
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 5px;
+ 
+
 }
 .Projects-wrapper{
   display: flex;
@@ -317,6 +343,18 @@ opacity: 1;
   width: 30%;
   min-width: 320px;
   margin: 0 auto;
+}
+
+.Contact h3{
+  
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  color: #4a81f7;
+  font-size: 30px;
+  letter-spacing: 5px;
+ 
+ 
 }
 .Form-item{
   margin: 10px;
