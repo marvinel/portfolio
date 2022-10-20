@@ -178,11 +178,16 @@ left: 0;
 		0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
 		0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
 		0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
+
+  margin: 5px;
 }
 .About{
   min-height:55vh;
   display: flex;
   align-items: center;
+}
+.Me{
+  width: 50%;
 }
 
 
@@ -195,6 +200,7 @@ left: 0;
   padding:  20px;
   border-radius: 5px, 2s;
   border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+  
 
 }
 
