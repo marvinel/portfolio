@@ -47,10 +47,7 @@ function App() {
         <Contact />
 
         <div id='button-up' onClick={scrollUp}> 
-
-          
-          <FontAwesomeIcon icon={faAngleUp} />
-          
+          <FontAwesomeIcon icon={faAngleUp} />       
         </div>
         <div>
           <p>
