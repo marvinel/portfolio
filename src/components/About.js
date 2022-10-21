@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 import Button from '@mui/material/Button';
 import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
+import { Link } from 'react-router-dom';
 
 function About() {
 
@@ -61,9 +62,9 @@ function About() {
                         design, construction and execution of technology projects with the
                         desire to continue learning and
                         overcome new challenges.</p>
-                    <a href="./pdf" target="_blank" ><Button variant="contained" endIcon={<PictureAsPdf />}>
+                    <Link to="/pdf"  ><Button variant="contained" endIcon={<PictureAsPdf />}>
                         RESUME
-                    </Button> </a>
+                    </Button> </Link>
                 </div>
             </div>
         </>
