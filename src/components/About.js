@@ -62,7 +62,7 @@ function About() {
                         design, construction and execution of technology projects with the
                         desire to continue learning and
                         overcome new challenges.</p>
-                    <Link to="/pdf" ><Button variant="contained" endIcon={<PictureAsPdf />}>
+                    <Link to="/pdf" target="_blank" ><Button variant="contained" endIcon={<PictureAsPdf />}>
                         RESUME
                     </Button> </Link>
                 </div>
