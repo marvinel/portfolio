@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 function Projects() {
   const proyectos = [
-    { id: 1, link: "https://marfilms.netlify.app/", name: "Marfilms", descripcion: "Web page where a list of the latest movies is shown, you can also search for a specific one and it shows you recommended movies.", tecnologias: ["Reac Js"] },
+    { id: 1, link: "https://marfilms.netlify.app/", name: "Marfilms", descripcion: "Web page where a list of the latest movies is shown, you can also search for a specific one and it shows you recommended movies.", tecnologias: ["React Js"] },
     { id: 2, link: "https://climappte.netlify.app/", name: "Climappte", descripcion: "Weather website where you can find out about the weather in any city you want.", tecnologias: ["React Js"] },    
     { id: 3, link: "https://quinterest.netlify.app/", name: "Quinterest", descripcion: "This Application is based on Pinterest where you can register to explore images of other users, upload your own images and save the ones you like the most.", tecnologias: ["React Js", "Node Js", "MongoDB", "Cloudinary"] }
   ]

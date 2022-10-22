@@ -18,7 +18,7 @@ function Home() {
                 <div className="Home-left">
                     <h1>
                         <span style-='--content: "Develop."'> HI! </span>
-                        <span className="Name" > Im Marvin Henriquez </span>
+                        <span className="Name" > I am Marvin Henriquez </span>
                         <span > Web Developer </span>
                     </h1>
                 </div>

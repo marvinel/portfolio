@@ -47,7 +47,7 @@ function About() {
                                     <span id='Tooltip' className='Tooltip'> {item.tec}</span>
 
                                     
-                                    <svg style={{fill:`${item.color}`, width:"50px"}} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title><path d={item.svg}/></svg> 
+                                    <svg style={{fill:`${item.color}`, width:"50px"}} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>{item.tec}</title><path d={item.svg}/></svg> 
                                { //<img src={item.img} alt={item.tec} width="50px" />
                                }
                                 </div>
@@ -56,7 +56,7 @@ function About() {
                     </div>
                 </div>
                 <div className='Me'>
-                    <h3>Who am i?</h3>
+                    <h3>Who am I?</h3>
                     <p>Systems engineer passionate about web development focused and
                         trained to provide the best user experience with excellent criteria in
                         design, construction and execution of technology projects with the
