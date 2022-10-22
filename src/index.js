@@ -12,6 +12,7 @@ root.render(
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="/pdf" element={<Pdf />} />
+      <Route path='*' element={<h1>Not Found</h1>} />
     </Routes>
   </BrowserRouter>
 );
