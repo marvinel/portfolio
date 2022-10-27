@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
@@ -13,13 +13,25 @@ import TextField from '@mui/material/TextField';
 import Swal from 'sweetalert2'
 function Contact() {
     const form = useRef();
+    const [name, setName] = useState('');
+    const [email, setEmail]= useState('');
+    const [message, setMessage]= useState('');
 
     const sendEmail = (e) => {
         e.preventDefault();
+        if(name.trim().length === 0 || email.trim().length === 0 || message.trim().length === 0){
+            Swal.fire({
+                title: 'Error!',
+                text: 'These values should not be null',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        }else{
+
+        
         emailjs.sendForm('service_4ue7978', 'template_anw86go', form.current, 'RHmO-t5Vfs4Lnfq77')
             .then((result) => {
-                console.log(result.text);
-                console.log("se envio el mensaje")
+
                 Swal.fire({
                     title: 'Send!',
                     text: 'Do you want to continue',
@@ -27,7 +39,7 @@ function Contact() {
                     confirmButtonText: 'Cool'
                   })
             }, (error) => {
-                console.log(error.text);
+                console.error(error.text);
                 Swal.fire({
                     title: 'Error!',
                     text: 'Do you want to continue',
@@ -35,6 +47,7 @@ function Contact() {
                     confirmButtonText: 'Cool'
                   })
             });
+        }
     };
 
     return (
@@ -46,14 +59,15 @@ function Contact() {
                 <form className='form' ref={form} onSubmit={sendEmail}>
                     <div className='Form-item'>
                         <label>Name</label>
-                        <TextField className='Form-Input'
+                        <TextField className='Form-Input' onChange={(e)=> setName(e.target.value)}
                             name="user_name"                                                 
                         />
                     </div>
                     <div className='Form-item'>
                         <label>Email</label>
                         <TextField className='Form-Input'
-                            type="email" name="user_email"                         
+                            type="email" name="user_email"  
+                            onChange={(e)=> setEmail(e.target.value)}                       
                         />
                     </div  >
                     <div className='Form-item'>
@@ -61,7 +75,8 @@ function Contact() {
                         <TextField className='Form-Input'
                             name="message"
                             multiline
-                            rows={4}                   
+                            rows={4}    
+                            onChange={(e)=> setMessage(e.target.value)}               
                         />
                     </div>
                     <Button className='Form-item' variant="contained" type='submit'>Send</Button>
